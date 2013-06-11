@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script type="text/javascript" src="jquery-1.10.1.min.js"></script> 
+<script type="text/javascript" src="jquery.validate.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Automotora</title>
+
+<script>
+
+
+$().ready(function() {
+	$("#form").validate({
+		rules: {
+			nombre: { required: true, minlength: 2},
+			email: { required:true, email: true},
+			fono: { minlength: 2, maxlength: 15}
+			
+		},
+		messages: {
+			nombre: "El campo es obligatorio.",
+			email : "El campo es obligatorio y debe tener formato de email correcto.",
+			fono : "El campo Tel&eacute;fono no contiene un formato correcto."
+		}
+	});
+});
+</script>
+</head>
+<h1> Contactenos </h1>
+<form id="form" action="mailto:felipe.acevedo10@inacapmail.cl" method="post" enctype="text/plain"> 
+Nombre <input type="text" name="nombre" size="30" maxlength="100"> 
+<br> 
+Email <input type="text" name="email" size="25" maxlength="100" value="@.com"> 
+<br> 
+Telefono <input type="text" name="fono" size="20" maxlength="10"> 
+<br> 
+<br> 
+Motivo de la consulta
+<br> 
+<select name="utilizacion"> 
+   	<option value="1">Cotizacion
+   	<option value="2">Visita 
+   	<option value="3">Compra 
+</select> 
+<br> 
+<br> 
+Cuentenos que desea.
+<br> 
+<textarea cols="30" rows="7" name="comentarios"></textarea> 
+
+<br> 
+<br> 
+<input type="submit" value="Enviar formulario"> 
+<br> 
+<br> 
+<input type="Reset" value="Borrar todo"> 
+</form>
+<body>
+</body>
+</html>
