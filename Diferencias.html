@@ -1,0 +1,11 @@
+18,19c18,19
+< 			fono: { minlength: 2, maxlength: 15}
+< 			
+---
+> 			fono: { required: true, minlength: 2, maxlength: 15},
+> 			comentarios: { required:true, minlength: 2},
+24c24,25
+< 			fono : "El campo Tel&eacute;fono no contiene un formato correcto."
+---
+> 			fono : "El campo Tel&eacute;fono no contiene un formato correcto o se encuentra vacio.",
+> 			comentarios: "El cuadro de comentarios no debe estar vacío"
